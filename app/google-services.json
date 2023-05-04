@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "959927175069",
+    "project_id": "order1absensiv3",
+    "storage_bucket": "order1absensiv3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959927175069:android:fc7db784a3f6f89ff85174",
+        "android_client_info": {
+          "package_name": "com.company.absensiv3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959927175069-bq46r1tgfae2uokekk2sppf821askkrd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.company.absensiv3",
+            "certificate_hash": "633ff85d3555c2e6114a2902ecfa7e8185e0d155"
+          }
+        },
+        {
+          "client_id": "959927175069-gufn5n6g7vji749863272a07pogp7sj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY1iiiwOEwQeLmNAlK2cMorzRSjETxDXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959927175069-gufn5n6g7vji749863272a07pogp7sj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

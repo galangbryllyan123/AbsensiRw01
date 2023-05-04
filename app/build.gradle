@@ -1,0 +1,154 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 32
+    defaultConfig {
+        applicationId "com.company.absensiv3"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 95 //91
+        versionName "3.9"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        setProperty("archivesBaseName", "versi_$versionName")
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        /*
+        splits {
+            abi {
+                enable true
+                reset()
+                include 'x86_64', 'x86', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips'
+                universalApk false
+            }
+        }*/
+        ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
+        /*ndk {
+            abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips'
+            // armeabi, mips and mips64 has removed since NDK r17
+        }*/
+    }
+
+    buildTypes {
+        debug {
+            //clean
+            shrinkResources true
+            minifyEnabled true
+            //multiDexKeepProguard file('proguard.multidex.config')
+            multiDexKeepFile file('multidex-config.txt')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            //multiDexKeepProguard file('proguard.multidex.config')
+            multiDexKeepFile file('multidex-config.txt')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        /**
+
+         debug {
+         manifestPlaceholders = [crashlyticsEnabled: true]
+         minifyEnabled false
+         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+         }
+         release {
+         minifyEnabled false
+         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+         manifestPlaceholders = [crashlyticsEnabled: false]
+
+         }
+         */
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    def lifecycle_version = "2.4.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    
+    api 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    
+    implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+
+    //implementation 'com.github.Kunzisoft:Android-SwitchDateTimePicker:2.0'
+    //implementation 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.2'
+
+    implementation 'com.nabinbhandari.android:permissions:3.8'
+
+    //implementation 'org.apache.poi:poi:4.1.0'
+    implementation files('libs/poi-3.17.jar')
+
+    //play services
+    implementation 'com.google.android.gms:play-services-basement:18.1.0'
+    implementation 'com.google.android.gms:play-services-ads:21.2.0'
+    //implementation 'com.google.android.play:core:1.9.0'
+
+    //firebase firestore
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-database:20.0.6'
+    implementation 'com.google.firebase:firebase-analytics:21.1.1'
+    implementation 'com.google.firebase:firebase-firestore:24.3.1'
+    implementation 'com.google.firebase:firebase-storage:20.0.2'
+    implementation 'com.google.firebase:firebase-ads:21.2.0'
+    implementation 'com.google.firebase:firebase-auth:21.0.8'
+    implementation 'com.firebaseui:firebase-ui-firestore:5.0.0'
+
+
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.whiteelephant:monthandyearpicker:1.3.0'
+
+
+    implementation project(':dialogsheet')
+
+
+    implementation 'org.apache.commons:commons-lang3:3.4'
+
+    implementation 'info.androidhive:fontawesome:0.0.5'
+    implementation project(':SweetAlert')
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.github.Commit451:ModalBottomSheetDialogFragment:+'
+    //implementation 'com.github.HITGIF:TextFieldBoxes:+'
+    implementation 'com.github.dimorinny:floating-text-button:0.0.4'
+
+    //implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+    //implementation 'com.github.kenmeidearu:MaterialDateTimePicker:1.0.0'
+    implementation 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.2'
+    implementation "com.github.Kunzisoft:Android-SwitchDateTimePicker:2.0"
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.3.4'
+
+    implementation "biz.laenger.android:vpbs:0.0.6"
+}

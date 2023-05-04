@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_kelas"
+        android:icon="@drawable/ic_kelas_24dp"
+        android:title="@string/title_kelas"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navigation_absensi"
+        android:icon="@drawable/ic_absensi_24dp"
+        android:title="@string/title_absensi"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navigation_nilai"
+        android:icon="@drawable/ic_nilai_24dp"
+        android:title="@string/title_nilai"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/navigation_info"
+        android:icon="@drawable/ic_info_24dp"
+        android:title="@string/title_info"
+        app:showAsAction="always"/>
+
+</menu>

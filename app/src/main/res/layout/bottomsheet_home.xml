@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_close"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:backgroundTint="@color/colorAlfa"
+        app:fabSize="mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridbottom1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sub_label_count_nilai"
+        app:columnCount="4"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_nav1"
+            android:background="?selectableItemBackground"
+            app:contentPadding="10dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="0.0dip"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:layout_rowSpan="1"
+            app:layout_columnWeight="1.0"
+            app:layout_rowWeight="1.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <info.androidhive.fontawesome.FontTextView
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:id="@+id/iconbottom1"
+                    android:layout_width="42dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_home_solid"
+                    android:textSize="24dp"
+                    android:textColor="#3A4276"
+                    app:solid_icon="true" />
+                <TextView
+                    android:text="Ketua\n"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/tvbottom1"
+                    android:layout_width="wrap_content"
+                    style="@style/text_content"
+                    android:textColor="#606060"
+                    android:layout_marginBottom="0dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_nav2"
+            android:background="?selectableItemBackground"
+            app:contentPadding="10dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="0.0dip"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:layout_rowSpan="1"
+            app:layout_columnWeight="1.0"
+            app:layout_rowWeight="1.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <info.androidhive.fontawesome.FontTextView
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:id="@+id/iconbottom2"
+                    android:layout_width="42dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_book_open_solid"
+                    android:textSize="24dp"
+                    android:textColor="#3A4276"
+                    app:solid_icon="true" />
+                <TextView
+                    android:text="Shift\n"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/tvbottom2"
+                    android:layout_width="wrap_content"
+                    style="@style/text_content"
+                    android:textColor="#606060"
+                    android:layout_marginBottom="0dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_nav3"
+            android:background="?selectableItemBackground"
+            app:contentPadding="10dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="0.0dip"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:layout_rowSpan="1"
+            app:layout_columnWeight="1.0"
+            app:layout_rowWeight="1.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <info.androidhive.fontawesome.FontTextView
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:id="@+id/iconbottom3"
+                    android:layout_width="42dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_users_solid"
+                    android:textSize="24dp"
+                    android:textColor="#3A4276"
+                    app:solid_icon="true" />
+                <TextView
+                    android:text="Daftar\nwarga"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/tvbottom3"
+                    android:layout_width="wrap_content"
+                    style="@style/text_content"
+                    android:textColor="#606060"
+                    android:layout_marginBottom="0dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_nav4"
+            android:background="?selectableItemBackground"
+            app:contentPadding="10dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="0.0dip"
+            app:layout_column="3"
+            app:layout_row="0"
+            app:layout_rowSpan="1"
+            app:layout_columnWeight="1.0"
+            app:layout_rowWeight="1.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <info.androidhive.fontawesome.FontTextView
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:id="@+id/iconbottom4"
+                    android:layout_width="42dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_clock_solid"
+                    android:textSize="24dp"
+                    android:textColor="#3A4276"
+                    app:solid_icon="true" />
+                <TextView
+                    android:text="Catatan\nKehadiran"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/tvbottom4"
+                    android:layout_width="wrap_content"
+                    style="@style/text_content"
+                    android:textColor="#606060"
+                    android:layout_marginBottom="0dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--BAWAH-->
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_nav5"
+            android:background="?selectableItemBackground"
+            app:contentPadding="10dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="0.0dip"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:layout_rowSpan="1"
+            app:layout_columnWeight="1.0"
+            app:layout_rowWeight="1.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <info.androidhive.fontawesome.FontTextView
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:id="@+id/iconbottom5"
+                    android:layout_width="42dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_notes_medical_solid"
+                    android:textSize="24dp"
+                    android:textColor="#3A4276"
+                    app:solid_icon="true" />
+                <TextView
+                    android:text="Catatan\nPenilaian"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/tvbottom5"
+                    android:layout_width="wrap_content"
+                    style="@style/text_content"
+                    android:textColor="#606060"
+                    android:layout_marginBottom="0dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_nav6"
+            android:background="?selectableItemBackground"
+            app:contentPadding="10dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="0.0dip"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:layout_rowSpan="1"
+            app:layout_columnWeight="1.0"
+            app:layout_rowWeight="1.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <info.androidhive.fontawesome.FontTextView
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:id="@+id/iconbottom6"
+                    android:layout_width="42dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_hourglass_start_solid"
+                    android:textSize="24dp"
+                    android:textColor="#3A4276"
+                    app:solid_icon="true" />
+                <TextView
+                    android:text="Catatan\nSikap Prilaku"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/tvbottom6"
+                    android:layout_width="wrap_content"
+                    style="@style/text_content"
+                    android:textColor="#606060"
+                    android:layout_marginBottom="0dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_nav7"
+            android:background="?selectableItemBackground"
+            app:contentPadding="10dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="0.0dip"
+            app:layout_column="2"
+            app:layout_row="1"
+            app:layout_rowSpan="1"
+            app:layout_columnWeight="1.0"
+            app:layout_rowWeight="1.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <info.androidhive.fontawesome.FontTextView
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:id="@+id/iconbottom7"
+                    android:layout_width="42dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_file_export_solid"
+                    android:textSize="24dp"
+                    android:textColor="#3A4276"
+                    app:solid_icon="true" />
+                <TextView
+                    android:text="Export\nData"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/tvbottom7"
+                    android:layout_width="wrap_content"
+                    style="@style/text_content"
+                    android:textColor="#606060"
+                    android:layout_marginBottom="0dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_nav8"
+            android:background="?selectableItemBackground"
+            app:contentPadding="10dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="0.0dip"
+            app:layout_column="3"
+            app:layout_row="1"
+            app:layout_rowSpan="1"
+            app:layout_columnWeight="1.0"
+            app:layout_rowWeight="1.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <info.androidhive.fontawesome.FontTextView
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:id="@+id/iconbottom8"
+                    android:layout_width="42dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_file_import_solid"
+                    android:textSize="24dp"
+                    android:textColor="#3A4276"
+                    app:solid_icon="true" />
+                <TextView
+                    android:text="Import\nData"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/tvbottom8"
+                    android:layout_width="wrap_content"
+                    style="@style/text_content"
+                    android:textColor="#606060"
+                    android:layout_marginBottom="0dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="0dp"
+        app:cardCornerRadius="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWindowBackgroundWhite">
+        <LinearLayout
+            android:id="@+id/addView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

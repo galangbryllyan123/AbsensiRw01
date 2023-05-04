@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_start"
+    tools:context=".Splash">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="#fff"
+            android:orientation="vertical"
+            android:layout_above="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/addView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/l2"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/l3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:background="@drawable/circle"
+                    app:srcCompat="@drawable/school"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:gravity="left"
+                    android:layout_toRightOf="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:fontFamily="sans-serif-condensed"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="#FF5722"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"/>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/waktu"
+                        android:visibility="visible"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:textColor="@color/colorTextThird"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/circletext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 detik"/>
+
+                    <ImageView
+                        android:id="@+id/action_skip"
+                        android:visibility="gone"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/circle"
+                        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9dp"
+                        android:text="Lewati" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

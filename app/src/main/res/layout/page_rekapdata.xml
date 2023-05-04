@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/coordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingRight="16dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_collapseMode="pin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:fontFamily="sans-serif-light"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rekap Data"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:background="@color/colorWindowBackground"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icon1"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_toLeftOf="@+id/arraw"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/circle"
+                        app:srcCompat="@drawable/school"/>
+                    <View
+                        android:id="@+id/arraw"
+                        android:background="?android:listDivider"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"/>
+
+                    <ImageView
+                        android:id="@+id/icon2"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_toRightOf="@+id/arraw"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/circle"
+                        app:srcCompat="@drawable/ms_excel"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/ev_title"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:background="@drawable/circletext"
+                    android:text="Export Data ke file XLS" />
+
+                <TextView
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:background="@drawable/circletext"
+                    android:text="Semua File tersimpan dalam folder AbsensiKu\ndi Internal atau di SDCard Smartphone" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:hint="Jenis Rekap Data"
+                    app:startIconDrawable="@drawable/ic_baseline_short_text_24">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tf_jenis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tf_kelas_lyt"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:hint="Ketua"
+                    app:startIconDrawable="@drawable/ic_baseline_short_text_24">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tf_kelas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tf_pelajaran_lyt"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:hint="Shift"
+                    app:startIconDrawable="@drawable/ic_baseline_short_text_24">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tf_pelajaran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tf_tanggal_darike_lyt"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/activity_vertical_margin"
+                        app:startIconDrawable="@drawable/ic_date_24dp"
+                        android:hint="Dari">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tf_tanggal_dari"
+                            android:focusable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="date"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/activity_vertical_margin"
+                        app:startIconDrawable="@drawable/ic_date_24dp"
+                        android:hint="Sampai">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tf_tanggal_ke"
+                            android:focusable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="date"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/action_simpan"
+                    android:layout_gravity="right"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Export" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

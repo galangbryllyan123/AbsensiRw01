@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_history"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_history_toggle_off_24"
+        android:title="History Rekap"/>
+    <item
+        android:id="@+id/rekaplama"
+        app:showAsAction="never"
+        android:title="Rekap data lama disini">
+    </item>
+</menu>

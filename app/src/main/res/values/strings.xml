@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Absensi</string>
+    <string name="app_name_desc">Aplikasi untuk mempermudah absensi dan penilaian  </string>
+    <string name="title_sekolah">Untitled</string>
+
+    <string name="title_kelas">Ketua</string>
+    <string name="title_absensi">Absensi</string>
+    <string name="title_nilai">Nilai</string>
+    <string name="title_info">Info</string>
+    <string name="title2_kelas">Shift</string>
+    <string name="title2_absensi">Kehadiran</string>
+    <string name="title2_nilai">Penilaian</string>
+    <string name="title2_sikapprilaku">Sikap dan Prilaku</string>
+    <string name="title2_info">Info Aplikasi</string>
+    <string name="title2_pelajaran">Daftar Ketua</string>
+    <string name="title2_pelajaran_buat">Buat Shift</string>
+
+    <string name="title_activity_detail">ActivityDetail</string>
+    <string name="email_developer">seno262000@gmail.com</string>
+    <string name="choose_email_client">Pilih klien email</string>
+
+
+    <string name="url_template_xls">https://download.kopas.id/absensiku_template.zip</string>
+    <string name="app_name2">Absensi Rw 01</string>
+    <string name="nilai_kurang"><![CDATA[0 Anak]]></string>
+    <string name="nilai_lebih"><![CDATA[0 Anak]]></string>
+
+    <string name="admob_app_id">ca-app-pub-9990243117401616~7999841653</string>
+    <string name="inter_ad_unit_id">ca-app-pub-9990243117401616/7250237892</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9990243117401616/1957602514</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fab_menu"
+
+            android:layout_gravity="bottom|end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            app:menu_labels_textColor="#000000"
+            app:menu_labels_colorNormal="#FFFFFF"
+            app:menu_labels_colorPressed="#BDBDBD"
+            app:fab_size="normal"
+            app:menu_backgroundColor="@android:color/transparent"
+            app:menu_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="#FF00786D"
+            app:menu_icon="@drawable/ic_add_24dp"
+            app:menu_labels_showShadow="true"
+            app:menu_openDirection="up"
+            app:menu_showShadow="true">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/action_ruangkelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Ruang Kelas"
+                app:srcCompat="@drawable/fab_add"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="#FF00786D"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/action_siswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Siswa"
+                app:srcCompat="@drawable/fab_add"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="#FF00786D"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/action_pelajaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Pelajaran"
+                app:srcCompat="@drawable/fab_add"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="#FF00786D"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/action_kehadiran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Kehadiran"
+                app:srcCompat="@drawable/fab_add"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="#FF00786D"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/action_penilaian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Penilaian"
+                app:srcCompat="@drawable/fab_add"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="#FF00786D"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/action_rekap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Rekap"
+                app:srcCompat="@drawable/fab_add"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="#FF00786D"
+                app:fab_size="mini" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

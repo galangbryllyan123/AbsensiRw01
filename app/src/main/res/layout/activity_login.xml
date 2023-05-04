@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorWindowBackgroundWhite"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="124dp"
+                    android:layout_height="124dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="60dp"
+                    android:padding="5dp"
+                    android:src="@drawable/school" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="#8dc9b7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="@string/app_name2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#FF9800" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:hint="Email"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_baseline_mail_outline_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:hint="Passoword"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/ic_baseline_vpn_key_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/editFullNameLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:hint="Full Name"
+                    android:visibility="gone"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_baseline_person_outline_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/restore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:text="Migrasikan data lama Saya ke versi terbaru"
+                    android:textColor="#878787" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin">
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/actSignInConfirm"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toStartOf="@id/actSignUp"
+                        android:layout_toLeftOf="@id/actSignUp"
+                        android:text="Masuk"
+                        android:visibility="gone" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/actSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:text="DAFTAR"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/actSignUpConfirm"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toStartOf="@id/actSignIn"
+                        android:layout_toLeftOf="@id/actSignIn"
+                        android:text="Daftar Disini" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/actSignIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:text="MASUK" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:fillViewport="true"
+            android:background="@color/colorWindowBackground"
+            android:scrollbars="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/c_d"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout
+                android:id="@+id/c_e"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linierLayout1"
+                    android:orientation="vertical"
+                    android:paddingTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:fontFamily="sans-serif-light"
+                        android:padding="0.0dip"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:text="Akumulasi Penilaian"
+                        style="@style/text_label" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:id="@+id/grid1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_below="@+id/a1"
+                        app:columnCount="2"
+                        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                        <androidx.cardview.widget.CardView
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="8dp"
+                            android:layout_marginTop="0.0dip"
+                            app:layout_column="0"
+                            app:layout_row="0"
+                            app:layout_rowSpan="3"
+                            app:layout_columnWeight="1.0"
+                            app:layout_rowWeight="1.0"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            app:contentPadding="4dp"
+                            app:contentPaddingTop="16dp"
+                            app:contentPaddingBottom="16dp">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:text="0"
+                                        android:textSize="42dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:id="@+id/tv1"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="match_parent"
+                                        android:layout_marginBottom="0dp"
+                                        android:textColor="@color/colorMasuk" />
+
+                                    <TextView
+                                        android:textSize="16dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:text="Nilai Total"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="match_parent"
+                                        android:textColor="@color/colorMasuk" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="8dp"
+                            android:layout_marginTop="0.0dip"
+                            app:layout_column="1"
+                            app:layout_row="0"
+                            app:layout_rowSpan="1"
+                            app:layout_columnWeight="1.0"
+                            app:layout_rowWeight="1.0"
+                            android:layout_margin="4dp"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            app:contentPadding="4dp"
+                            app:contentPaddingTop="16dp"
+                            app:contentPaddingBottom="16dp">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:text="0"
+                                        android:textSize="24dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:id="@+id/tv2"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="match_parent"
+                                        android:layout_marginBottom="0dp"
+                                        android:textColor="@color/colorSakit" />
+
+                                    <TextView
+                                        android:textSize="16dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:text="Nilai Tertinggi"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="match_parent"
+                                        android:textColor="@color/colorSakit" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="8dp"
+                            android:layout_marginTop="0.0dip"
+                            app:layout_column="1"
+                            app:layout_row="1"
+                            app:layout_rowSpan="1"
+                            app:layout_columnWeight="1.0"
+                            app:layout_rowWeight="1.0"
+                            android:layout_margin="4dp"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            app:contentPadding="4dp"
+                            app:contentPaddingTop="16dp"
+                            app:contentPaddingBottom="16dp">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:text="0"
+                                        android:textSize="24dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:id="@+id/tv3"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="match_parent"
+                                        android:layout_marginBottom="0dp"
+                                        android:textColor="@color/colorAlfa" />
+
+                                    <TextView
+                                        android:textSize="16dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:text="Nilai Terendah"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="match_parent"
+                                        android:textColor="@color/colorAlfa" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+
+                        <androidx.cardview.widget.CardView
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="8dp"
+                            android:layout_marginTop="0.0dip"
+                            app:layout_column="1"
+                            app:layout_row="2"
+                            app:layout_rowSpan="1"
+                            app:layout_columnWeight="1.0"
+                            app:layout_rowWeight="1.0"
+                            android:layout_margin="4dp"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            app:contentPadding="4dp"
+                            app:contentPaddingTop="16dp"
+                            app:contentPaddingBottom="16dp">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:text="0"
+                                        android:textSize="24dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:id="@+id/tv4"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="match_parent"
+                                        android:layout_marginBottom="0dp"
+                                        android:textColor="@color/colorIzin" />
+
+                                    <TextView
+                                        android:textSize="16dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:text="Nilai Rata2x"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="match_parent"
+                                        android:textColor="@color/colorIzin" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </androidx.gridlayout.widget.GridLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linierLayout2"
+                    android:orientation="vertical"
+                    android:paddingTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:fontFamily="sans-serif-light"
+                        android:padding="0.0dip"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:text="Data Penilaian"
+                        style="@style/text_label" />
+
+                    <include layout="@layout/empty_view_down"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycle_view_recent"
+                        android:nestedScrollingEnabled="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
